@@ -1,0 +1,103 @@
+.swiper,
+.swiper-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	height: auto;
+	@media (min-width: 992px) {
+	}
+}
+
+.swiper {
+	position: relative;
+
+	@media (max-width: 991px) and (min-width: 768px) {
+		margin: -4rem;
+		padding: 4rem;
+	}
+
+	@media (max-width: 767px) {
+		margin: -1rem;
+		padding: 1rem;
+	}
+}
+
+.swiper-navigation {
+	@media (min-width: 992px) {
+		display: none;
+	}
+
+	@media (max-width: 991px) {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		width: 100%;
+
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+
+	&.swiper-navigation--bottom {
+		@media (max-width: 767px) {
+			top: unset;
+			bottom: 50px;
+
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	border-radius: 50%;
+
+	will-change: background-color;
+	transition: background-color 0.2s;
+
+	.swiper-navigation:not(.swiper-navigation--white) & {
+		height: 4.4rem;
+		width: 4.4rem;
+
+		background: linear-gradient(268deg, $purple-2 0%, transparent) $purple-1;
+
+		outline: 1rem solid rgba($black-3, 0.3);
+	}
+
+	.swiper-navigation--white & {
+		height: 3rem;
+		width: 3rem;
+
+		border: 1px solid $white;
+	}
+
+	&:hover,
+	&:focus-visible {
+		background-color: $purple-5;
+	}
+
+	&:after {
+		width: 1.2rem;
+		height: 2rem;
+
+		content: "";
+	}
+}
+
+.swiper-button-prev {
+	&:after {
+		background: url("../images/dev/svg/arrow.svg") no-repeat;
+
+		transform: rotate(180deg);
+	}
+}
+
+.swiper-button-next {
+	&:after {
+		background: url("../images/dev/svg/arrow.svg") no-repeat;
+	}
+}

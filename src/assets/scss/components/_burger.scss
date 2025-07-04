@@ -1,0 +1,57 @@
+.burger {
+	position: relative; // was
+
+	width: 2.8rem; // was
+	height: 2.8rem; // was
+
+	background: transparent; // was
+	border: 0; // was
+
+	cursor: pointer; // was
+	overflow: hidden; // was
+
+	@media (min-width: 992px) {
+		display: none; // was
+	}
+
+	span {
+		position: absolute; // was
+		top: 50%; // was
+		left: 50%; // was
+
+		width: 2.2rem; // was
+		height: 1px; // was
+
+		background-color: $black-1; // was
+
+		transform: translate(-50%, -50%); // was
+		will-change: transform; // was
+		transition: 0.2s; // was
+
+		&:nth-of-type(2) {
+			top: calc(50% - 0.6rem); // was
+		}
+
+		&:nth-of-type(3) {
+			top: calc(50% + 0.6rem); // was
+		}
+	}
+
+	&.active {
+		span {
+			&:nth-of-type(1) {
+				display: none; // was
+			}
+
+			&:nth-of-type(2) {
+				top: 50%; // was
+				transform: translate(-50%, 0%) rotate(45deg); // was
+			}
+
+			&:nth-of-type(3) {
+				top: 50%; // was
+				transform: translate(-50%, 0%) rotate(-45deg); // was
+			}
+		}
+	}
+}

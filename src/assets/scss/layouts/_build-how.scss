@@ -1,0 +1,159 @@
+.build-how__deco {
+	@media (min-width: 768px) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 28%;
+
+		max-height: 30rem;
+		margin-inline: auto;
+
+		z-index: -1;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.build-how__content {
+	display: flex;
+
+	@media (min-width: 1201px) {
+		gap: 11rem;
+	}
+
+	@media (max-width: 1200px) and (min-width: 768px) {
+		gap: 7rem;
+	}
+
+	&:not(:last-child) {
+		@media (min-width: 1201px) {
+			margin-bottom: 12rem;
+		}
+
+		@media (max-width: 1200px) and (min-width: 768px) {
+			margin-bottom: 8rem;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 3.6rem;
+		}
+	}
+}
+
+.build-how___heading {
+	@media (min-width: 1201px) {
+		flex: 0 1 calc(50% - 11rem);
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		flex: 1 1 50%;
+	}
+}
+
+.build-how__text {
+	@media (min-width: 992px) {
+		flex: 1 0 50%;
+	}
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+.steps-slider__circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 6.5rem;
+	font-weight: 700;
+	color: $black-1;
+
+	background: $gradient-4;
+
+	border-radius: 50%;
+	outline: 2rem solid rgba($black-3, 0.3);
+
+	@media (min-width: 1201px) {
+		height: 16rem;
+		width: 16rem;
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		height: 13rem;
+		width: 13rem;
+	}
+
+	@media (max-width: 991px) {
+		height: 16rem;
+		width: 16rem;
+	}
+
+	@media (min-width: 768px) {
+		margin: 2rem 2rem 4rem;
+	}
+
+	@media (max-width: 767px) {
+		margin: 2rem 2rem 5.6rem;
+	}
+}
+
+.steps-slider__wrapper {
+	@media (min-width: 992px) {
+		display: flex;
+	}
+
+	@media (min-width: 1201px) {
+		justify-content: space-evenly;
+		gap: 4rem;
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		justify-content: space-between;
+		gap: 2rem;
+	}
+}
+
+.steps-slider__slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width: 992px) {
+		flex: 1 1 25%;
+
+		max-width: 23.4rem;
+	}
+}
+
+.steps-slider__row {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.steps-slider__arrow {
+	@media (min-width: 768px) {
+		max-width: 3rem;
+		margin-top: 0.6rem;
+
+		@include image-contain;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.steps-slider__title {
+	@media (max-width: 1200px) and (min-width: 992px) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: 767px) {
+		max-width: 20rem;
+
+		text-align: center;
+	}
+}

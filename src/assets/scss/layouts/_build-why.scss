@@ -1,0 +1,137 @@
+.build-why__deco {
+	@media (min-width: 768px) {
+		position: absolute;
+		top: 38%;
+
+		z-index: -1;
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.build-why__content {
+	display: flex;
+
+	@media (min-width: 1201px) {
+		gap: 11rem;
+	}
+
+	@media (max-width: 1200px) and (min-width: 768px) {
+		gap: 7rem;
+	}
+
+	&:not(:last-child) {
+		@media (min-width: 1201px) {
+			margin-bottom: 10rem;
+		}
+
+		@media (max-width: 1200px) and (min-width: 768px) {
+			margin-bottom: 8rem;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 3.6rem;
+		}
+	}
+}
+
+.build-why___heading {
+	@media (min-width: 1201px) {
+		flex: 0 1 calc(50% - 11rem);
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		flex: 1 1 50%;
+	}
+}
+
+.build-why__text {
+	@media (min-width: 992px) {
+		flex: 1 0 50%;
+	}
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+.why-slider__wrapper {
+	@media (min-width: 992px) {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+}
+
+.why-slider__slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: $gradient-5;
+
+	border-radius: 4rem;
+
+	@media (min-width: 1201px) {
+		padding: 2.5rem 2.5rem 4rem;
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		padding: 1.5rem 1.5rem 3rem;
+	}
+
+	@media (min-width: 992px) {
+		flex: 1 1 25%;
+	}
+
+	@media (max-width: 991px) {
+		padding: 2.5rem 2.5rem 4rem;
+	}
+}
+
+.why-slider__image_wrapper {
+	margin: 1.5rem;
+
+	outline: 1.5rem solid rgba($black-3, 0.3);
+	border-radius: 50%;
+	overflow: hidden;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
+
+.why-slider__image {
+	@include image-cover;
+}
+
+.why-slider__title {
+	&:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.why-slider__deco {
+	display: inline-block;
+
+	height: 1px;
+	width: 60%;
+
+	background: rgba($purple-2, 0.3);
+
+	&:not(:last-child) {
+		margin-bottom: 1.8rem;
+	}
+}
+
+.why-slider__text {
+	flex-grow: 1;
+
+	@include text-s;
+
+	&:not(:last-child) {
+		margin-bottom: 3.5rem;
+	}
+}
