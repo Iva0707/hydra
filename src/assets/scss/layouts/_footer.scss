@@ -1,0 +1,172 @@
+.footer {
+	padding-block: 60px;
+}
+
+.footer__wrapper {
+	position: relative;
+}
+
+.footer__deco {
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	z-index: -1;
+
+	&.footer__deco--1 {
+		bottom: 90%;
+	}
+
+	&.footer__deco--2 {
+		bottom: 34%;
+	}
+}
+
+.footer__row {
+	display: flex;
+	align-items: stretch;
+
+	padding-bottom: 70px;
+
+	&:not(:last-child) {
+		position: relative;
+
+		margin-bottom: 50px;
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			height: 1px;
+			width: 100%;
+
+			background: linear-gradient(68.8deg, $black-1 0%, $black-1 0%, $purple-2 34.9%, $purple-1 68.7%, $black-1 99.5%);
+
+			content: "";
+		}
+	}
+}
+
+.footer__column {
+	flex: 1 1 25%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	padding-inline: 10px;
+
+	&:not(:last-child) {
+		position: relative;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			height: 100%;
+			width: 6px;
+
+			background: linear-gradient(68.8deg, $black-1 0%, $black-1 0%, $purple-2 34.9%, $purple-1 68.7%, $black-1 99.5%);
+
+			content: "";
+		}
+	}
+}
+
+.footer__logo_link {
+	display: inline-block;
+
+	width: 100%;
+	max-width: 185px;
+
+	aspect-ratio: 1;
+}
+
+.footer__logo {
+	@include image-contain;
+}
+
+.footer__item {
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}
+
+.footer__link {
+	font-weight: 700;
+
+	@include text;
+
+	&:hover,
+	&:focus-visible {
+		color: $purple-2;
+	}
+}
+
+.footer__subtitle {
+	font-weight: 700;
+
+	@include text;
+
+	&:not(:last-child) {
+		margin-bottom: 36px;
+	}
+}
+
+.footer__media_list {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	&:not(:last-child) {
+		margin-bottom: 36px;
+	}
+}
+
+.footer__media_link {
+	display: inline-block;
+
+	width: 100%;
+	max-width: 32px;
+
+	border-radius: 50%;
+	aspect-ratio: 1;
+
+	&:hover,
+	&:focus-visible {
+		filter: brightness(0) saturate(100%) invert(61%) sepia(53%) saturate(358%) hue-rotate(229deg) brightness(97%) contrast(77%);
+	}
+}
+
+.footer__media_image {
+	@include image-contain;
+}
+
+.footer__bottom {
+	text-align: center;
+}
+
+.footer__text {
+	width: 100%;
+
+	font-weight: 700;
+
+	@include text-s;
+
+	& a {
+		color: $purple-2;
+
+		&:not(.link--no-hover):before {
+			bottom: 0;
+		}
+
+		&:hover,
+		&:focus-visible {
+			color: $purple-5;
+		}
+	}
+}

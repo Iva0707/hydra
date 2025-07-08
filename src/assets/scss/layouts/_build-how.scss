@@ -27,6 +27,14 @@
 		gap: 7rem;
 	}
 
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+
+	@media (max-width: 767px) {
+		gap: 3.6rem;
+	}
+
 	&:not(:last-child) {
 		@media (min-width: 1201px) {
 			margin-bottom: 12rem;
@@ -56,10 +64,6 @@
 	@media (min-width: 992px) {
 		flex: 1 0 50%;
 	}
-
-	@media (max-width: 991px) {
-		display: none;
-	}
 }
 
 .steps-slider__circle {
@@ -74,7 +78,6 @@
 	background: $gradient-4;
 
 	border-radius: 50%;
-	outline: 2rem solid rgba($black-3, 0.3);
 
 	@media (min-width: 1201px) {
 		height: 16rem;
@@ -92,11 +95,15 @@
 	}
 
 	@media (min-width: 768px) {
-		margin: 2rem 2rem 4rem;
+		margin: 1.5rem 1.5rem 4rem;
+
+		outline: 1.5rem solid rgba($black-3, 0.3);
 	}
 
 	@media (max-width: 767px) {
-		margin: 2rem 2rem 5.6rem;
+		margin: 1rem 1rem 5.6rem;
+
+		outline: 1rem solid rgba($black-3, 0.3);
 	}
 }
 
