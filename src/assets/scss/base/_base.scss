@@ -10,14 +10,14 @@ html {
 	font-size: 62.5%;
 
 	background-color: $purple-4;
+
+	overflow-x: hidden;
 }
 
 body {
 	font-size: 1.6rem;
 	font-family: $font;
 	color: $white;
-
-	overflow-x: hidden;
 
 	&.boby--scroll-lock {
 		overflow: hidden;

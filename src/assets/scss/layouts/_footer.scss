@@ -1,9 +1,7 @@
 .footer {
-	padding-block: 60px;
-}
-
-.footer__wrapper {
 	position: relative;
+
+	padding-block: 6rem;
 }
 
 .footer__deco {
@@ -26,12 +24,23 @@
 	display: flex;
 	align-items: stretch;
 
-	padding-bottom: 70px;
+	padding-bottom: 7rem;
+
+	@media (max-width: 991px) {
+		flex-wrap: wrap;
+		gap: 4rem 0;
+	}
 
 	&:not(:last-child) {
 		position: relative;
 
-		margin-bottom: 50px;
+		@media (min-width: 768px) {
+			margin-bottom: 5rem;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 3.6rem;
+		}
 
 		&:after {
 			position: absolute;
@@ -49,30 +58,60 @@
 }
 
 .footer__column {
-	flex: 1 1 25%;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
 	width: 100%;
-	padding-inline: 10px;
+
+	@media (min-width: 992px) {
+		flex: 1 1 25%;
+
+		padding-inline: 1rem;
+	}
+
+	@media (max-width: 991px) {
+		text-align: center;
+	}
+
+	@media (max-width: 991px) and (min-width: 768px) {
+		flex: 1 1 33.333%;
+	}
+
+	&:first-child {
+		@media (min-width: 992px) and (min-width: 768px) {
+			padding-left: 0;
+		}
+	}
+
+	&:last-child {
+		@media (min-width: 992px) and (min-width: 768px) {
+			padding-right: 0;
+		}
+	}
 
 	&:not(:last-child) {
-		position: relative;
+		@media (min-width: 992px) and (min-width: 768px) {
+			@include column-deco;
+		}
+	}
 
-		&:after {
-			position: absolute;
-			top: 0;
-			right: 0;
+	&:nth-of-type(2) {
+		@media (max-width: 991px) and (min-width: 768px) {
+			order: -1;
+		}
+	}
 
-			height: 100%;
-			width: 6px;
+	&:nth-child(-n + 2) {
+		@media (max-width: 991px) and (min-width: 768px) {
+			@include column-deco;
+		}
+	}
 
-			background: linear-gradient(68.8deg, $black-1 0%, $black-1 0%, $purple-2 34.9%, $purple-1 68.7%, $black-1 99.5%);
-
-			content: "";
+	&.footer__column--navigation {
+		@media (max-width: 767px) {
+			display: none;
 		}
 	}
 }
@@ -81,7 +120,7 @@
 	display: inline-block;
 
 	width: 100%;
-	max-width: 185px;
+	max-width: 18.5rem;
 
 	aspect-ratio: 1;
 }
@@ -92,7 +131,7 @@
 
 .footer__item {
 	&:not(:last-child) {
-		margin-bottom: 15px;
+		margin-bottom: 1.5rem;
 	}
 }
 
@@ -108,12 +147,12 @@
 }
 
 .footer__subtitle {
+	font-size: 1.6rem;
+	line-height: 1.6em;
 	font-weight: 700;
 
-	@include text;
-
 	&:not(:last-child) {
-		margin-bottom: 36px;
+		margin-bottom: 2.6rem;
 	}
 }
 
@@ -123,7 +162,13 @@
 	gap: 2rem;
 
 	&:not(:last-child) {
-		margin-bottom: 36px;
+		@media (min-width: 768px) {
+			margin-bottom: 2.6rem;
+		}
+
+		@media (max-width: 767px) {
+			margin-bottom: 4.6rem;
+		}
 	}
 }
 
@@ -131,7 +176,7 @@
 	display: inline-block;
 
 	width: 100%;
-	max-width: 32px;
+	max-width: 3.2rem;
 
 	border-radius: 50%;
 	aspect-ratio: 1;
