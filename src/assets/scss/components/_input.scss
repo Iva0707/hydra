@@ -1,21 +1,23 @@
-input {
+input,
+textarea {
 	font-family: inherit;
 }
 
-.form__group {
+textarea {
+	resize: none;
+}
+
+.form {
 	position: relative;
 
-	width: 50%;
-	margin-top: 10px;
 	padding: 22px 42px 22px 42px;
 
 	border: 2px solid $white;
 	border-radius: 40px;
 }
 
-.form__field {
+.form__input {
 	width: 100%;
-	padding: 0;
 
 	color: $white;
 
@@ -24,52 +26,68 @@ input {
 	outline: 0;
 	border: none;
 
-	transition: border-color 0.2s;
-
 	@include text-s;
-
-	background-color: red;
 
 	&::placeholder {
 		color: transparent;
 	}
 
 	&:placeholder-shown ~ .form__label {
-		top: 50%;
+		top: 25px;
 
-		font-size: 1.3rem;
+		font-size: 1.4rem;
+		color: $white;
 
 		cursor: text;
+	}
 
-		transform: translateY(-50%);
+	&:focus-visible {
+		~ .form__label {
+			position: absolute;
+			top: 4px;
+
+			display: block;
+
+			font-size: 1.2rem;
+			color: $purple-2;
+		}
+	}
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		transition: background-color 9999s ease-in-out 0s;
+		-webkit-text-fill-color: $white;
+		caret-color: $white;
+
+		box-shadow: 0 0 0px 1000px transparent inset;
 	}
 }
 
 .form__label {
 	position: absolute;
-	top: 0;
+	top: 4px;
 
 	display: block;
 
-	font-size: 1rem;
-	color: $black-2;
+	font-size: 1.2rem;
+	color: $purple-2;
 
-	transition: 0.2s;
+	transition: top 0.2s, font-size 0.2s;
 }
 
-.form__field:focus {
-	~ .form__label {
-		position: absolute;
-		top: 0;
+.form__error {
+	display: none;
 
-		display: block;
+	margin-top: 6px;
 
-		font-size: 1rem;
-		font-weight: 700;
-		color: $purple-2;
+	font-size: 1.2rem;
+	color: #ff4d4f;
 
-		transition: 0.2s;
+	position: absolute;
+	left: 42px;
+	bottom: -1.8rem;
 
-		transform: translateY(0);
-	}
+	transition: opacity 0.2s ease;
 }

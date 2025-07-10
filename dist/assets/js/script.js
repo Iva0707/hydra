@@ -29,21 +29,21 @@ const debounce = (delay, fn) => {
 	};
 };
 
-// const handleAnchorLinks = () => {
-// 	const links = document.querySelectorAll('a[href^="#"]');
+const handleAnchorLinks = () => {
+	const links = document.querySelectorAll('a[href^="#"]');
 
-// 	links.forEach((link) => {
-// 		link.addEventListener("click", (event) => {
-// 			const targetId = link.getAttribute("href").substring(1);
-// 			const targetElement = document.getElementById(targetId);
+	links.forEach((link) => {
+		link.addEventListener("click", (event) => {
+			const targetId = link.getAttribute("href").substring(1);
+			const targetElement = document.getElementById(targetId);
 
-// 			if (!targetElement) return;
+			if (!targetElement) return;
 
-// 			event.preventDefault();
-// 			targetElement.scrollIntoView({ behavior: "smooth" });
-// 		});
-// 	});
-// };
+			event.preventDefault();
+			targetElement.scrollIntoView({ behavior: "smooth" });
+		});
+	});
+};
 
 // burger
 
@@ -230,6 +230,7 @@ const initContactSwiper = ({ windowWidth }) => {
 };
 
 const main = () => {
+	handleAnchorLinks();
 	resize(initContactSwiper, { debounceTime: 50 });
 	resize(initHowSwiper, { debounceTime: 50 });
 	resize(initTechnologiesSwiper, { debounceTime: 50 });
