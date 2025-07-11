@@ -74,9 +74,9 @@ button {
 		&.button--outline {
 			color: inherit;
 
-			background-color: rgba($purple-5, 0.4);
+			background-color: $purple-1;
 
-			border-color: rgba($purple-5, 0.4);
+			border-color: $purple-1;
 		}
 
 		&.button--arrow:after {

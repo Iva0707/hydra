@@ -1,0 +1,136 @@
+:root {
+	@media (min-width: 768px) {
+		--header-padding: 50px;
+	}
+
+	@media (max-width: 767px) {
+		--header-padding: 20px;
+	}
+}
+
+.header {
+	padding-block: var(--header-padding);
+}
+
+.header__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (min-width: 1201px) {
+		gap: 40px;
+	}
+
+	@media (max-width: 1200px) {
+		position: relative;
+
+		gap: 20px;
+	}
+}
+
+.header__column {
+	@media (max-width: 991px) {
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+
+		width: 100%;
+
+		z-index: 4;
+	}
+}
+
+.header__logo_link {
+	display: block;
+
+	width: 100%;
+	height: auto;
+
+	@media (min-width: 1201px) {
+		max-width: 190px;
+	}
+
+	@media (max-width: 1200px) and (min-width: 992px) {
+		max-width: 160px;
+	}
+
+	@media (max-width: 991px) {
+		max-width: 190px;
+	}
+}
+
+.header__logo {
+	@include image-contain;
+}
+
+.header__navigation {
+	@media (max-width: 991px) {
+		position: absolute;
+		left: calc(var(--header-padding) * -1);
+		top: calc(var(--header-padding) * -1);
+
+		width: 100%;
+		max-width: calc(50vw + var(--header-padding));
+		height: 100vh;
+		padding: 180px 40px 40px;
+
+		background-color: $purple-3;
+
+		z-index: 3;
+		transform: translate(-100%, 0);
+		opacity: 0;
+		visibility: hidden;
+
+		will-change: opacity, visibility, transform;
+		transition: opacity 0.2s ease-in, visibility 0.2s ease-in, transform 0.2s ease-in;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.header__list {
+	display: flex;
+
+	@media (min-width: 1201px) {
+		gap: 40px;
+	}
+
+	@media (max-width: 1200px) {
+		gap: 20px;
+	}
+
+	@media (min-width: 992px) {
+		align-items: center;
+	}
+
+	@media (max-width: 991px) {
+		flex-direction: column;
+	}
+}
+
+.header__link {
+	font-weight: 700;
+
+	will-change: color;
+	transition: color 0.2s;
+
+	@media (min-width: 992px) {
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 1.4rem;
+	}
+
+	&:hover,
+	&:focus-visible {
+		color: $purple-2;
+	}
+}

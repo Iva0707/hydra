@@ -10,14 +10,21 @@ textarea {
 .form {
 	position: relative;
 
-	padding: 22px 42px 22px 42px;
-
 	border: 2px solid $white;
-	border-radius: 40px;
+	border-radius: 4rem;
+
+	@media (min-width: 768px) {
+		padding: 2.2rem 4.2rem;
+	}
+
+	@media (max-width: 767px) {
+		padding: 1.6rem 3rem;
+	}
 }
 
 .form__input {
 	width: 100%;
+	height: 100%;
 
 	color: $white;
 
@@ -33,23 +40,39 @@ textarea {
 	}
 
 	&:placeholder-shown ~ .form__label {
-		top: 25px;
-
 		font-size: 1.4rem;
 		color: $white;
 
 		cursor: text;
+
+		@media (min-width: 768px) {
+			top: 2.5rem;
+		}
+
+		@media (max-width: 767px) {
+			top: 1.6rem;
+		}
 	}
 
 	&:focus-visible {
 		~ .form__label {
 			position: absolute;
-			top: 4px;
 
 			display: block;
 
 			font-size: 1.2rem;
-			color: $purple-2;
+
+			@media (min-width: 768px) {
+				top: 4px;
+
+				color: $purple-2;
+			}
+
+			@media (max-width: 767px) {
+				top: 2px;
+
+				color: $purple-1;
+			}
 		}
 	}
 
@@ -61,33 +84,45 @@ textarea {
 		-webkit-text-fill-color: $white;
 		caret-color: $white;
 
-		box-shadow: 0 0 0px 1000px transparent inset;
+		box-shadow: 0 0 0px 100rem transparent inset;
 	}
 }
 
 .form__label {
 	position: absolute;
-	top: 4px;
 
 	display: block;
 
 	font-size: 1.2rem;
-	color: $purple-2;
 
+	will-change: top, font-size;
 	transition: top 0.2s, font-size 0.2s;
+
+	@media (min-width: 768px) {
+		top: 4px;
+
+		color: $purple-2;
+	}
+
+	@media (max-width: 767px) {
+		top: 2px;
+
+		color: $purple-1;
+	}
 }
 
 .form__error {
 	display: none;
 
-	margin-top: 6px;
+	margin-top: 0.6rem;
 
 	font-size: 1.2rem;
 	color: #ff4d4f;
 
 	position: absolute;
-	left: 42px;
+	left: 4.2rem;
 	bottom: -1.8rem;
 
+	will-change: opacity;
 	transition: opacity 0.2s ease;
 }

@@ -47,70 +47,70 @@ const handleAnchorLinks = () => {
 
 // burger
 
-// const burger = ({ header, burger, menu }) => {
-// 	if (!header || !burger || !menu) return;
+const burger = ({ header, burger, menu }) => {
+	if (!header || !burger || !menu) return;
 
-// 	const toggleClasses = () => {
-// 		burger.classList.toggle("active");
-// 		menu.classList.toggle("active");
-// 		document.body.classList.toggle("boby--scroll-lock");
-// 		document.body.classList.toggle("body--overflow");
-// 	};
+	const toggleClasses = () => {
+		burger.classList.toggle("active");
+		menu.classList.toggle("active");
+		document.body.classList.toggle("boby--scroll-lock");
+		document.body.classList.toggle("body--overflow");
+	};
 
-// 	const closeMenu = () => {
-// 		burger.classList.remove("active");
-// 		menu.classList.remove("active");
-// 		document.body.classList.remove("boby--scroll-lock");
-// 		document.body.classList.remove("body--overflow");
-// 	};
+	const closeMenu = () => {
+		burger.classList.remove("active");
+		menu.classList.remove("active");
+		document.body.classList.remove("boby--scroll-lock");
+		document.body.classList.remove("body--overflow");
+	};
 
-// 	burger.addEventListener("click", (event) => {
-// 		event.preventDefault();
-// 		toggleClasses();
-// 		window.scrollTo(0, 0);
-// 	});
+	burger.addEventListener("click", (event) => {
+		event.preventDefault();
+		toggleClasses();
+		window.scrollTo(0, 0);
+	});
 
-// 	document.addEventListener("click", (event) => {
-// 		const isClickInsideHeader = header.contains(event.target);
-// 		const isMenuActive = menu.classList.contains("active");
+	document.addEventListener("click", (event) => {
+		const isClickInsideHeader = header.contains(event.target);
+		const isMenuActive = menu.classList.contains("active");
 
-// 		if (!isClickInsideHeader && isMenuActive) {
-// 			closeMenu();
-// 		}
-// 	});
+		if (!isClickInsideHeader && isMenuActive) {
+			closeMenu();
+		}
+	});
 
-// 	menu.addEventListener("click", (event) => {
-// 		const target = event.target;
-// 		const isLinkOrButton = target.closest("a, button");
-// 		if (isLinkOrButton) {
-// 			closeMenu();
-// 		}
-// 	});
+	menu.addEventListener("click", (event) => {
+		const target = event.target;
+		const isLinkOrButton = target.closest("a, button");
+		if (isLinkOrButton) {
+			closeMenu();
+		}
+	});
 
-// 	resize(({ windowWidth }) => {
-// 		if (windowWidth > 1024) {
-// 			closeMenu();
-// 		}
-// 	});
-// };
+	resize(({ windowWidth }) => {
+		if (windowWidth > 1024) {
+			closeMenu();
+		}
+	});
+};
 
-// const initBurger = () => {
-// 	const SELECTORS = {
-// 		header: ".js-header",
-// 		burger: ".js-burger",
-// 		menu: ".js-header-nav",
-// 	};
+const initBurger = () => {
+	const SELECTORS = {
+		header: ".js-header",
+		burger: ".js-burger",
+		menu: ".js-header-nav",
+	};
 
-// 	const header = document.querySelector(SELECTORS.header);
-// 	const burgerTrigger = document.querySelector(SELECTORS.burger);
-// 	const menu = document.querySelector(SELECTORS.menu);
+	const header = document.querySelector(SELECTORS.header);
+	const burgerTrigger = document.querySelector(SELECTORS.burger);
+	const menu = document.querySelector(SELECTORS.menu);
 
-// 	burger({
-// 		header,
-// 		burger: burgerTrigger,
-// 		menu,
-// 	});
-// };
+	burger({
+		header,
+		burger: burgerTrigger,
+		menu,
+	});
+};
 
 // how swiper
 let swiperHowInstance = null;
@@ -235,6 +235,7 @@ const main = () => {
 	resize(initHowSwiper, { debounceTime: 50 });
 	resize(initTechnologiesSwiper, { debounceTime: 50 });
 	resize(initWhySwiper, { debounceTime: 50 });
+	initBurger();
 };
 
 window.onload = () => {
