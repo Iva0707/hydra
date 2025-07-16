@@ -1,10 +1,10 @@
 :root {
 	@media (min-width: 768px) {
-		--header-padding: 50px;
+		--header-padding: 5rem;
 	}
 
 	@media (max-width: 767px) {
-		--header-padding: 20px;
+		--header-padding: 2rem;
 	}
 }
 
@@ -18,13 +18,13 @@
 	justify-content: space-between;
 
 	@media (min-width: 1201px) {
-		gap: 40px;
+		gap: 4rem;
 	}
 
 	@media (max-width: 1200px) {
 		position: relative;
 
-		gap: 20px;
+		gap: 2rem;
 	}
 }
 
@@ -35,7 +35,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 40px;
+		gap: 4rem;
 
 		width: 100%;
 
@@ -50,25 +50,22 @@
 	height: auto;
 
 	@media (min-width: 1201px) {
-		max-width: 190px;
+		max-width: 19rem;
 	}
 
 	@media (max-width: 1200px) and (min-width: 992px) {
-		max-width: 160px;
+		max-width: 16rem;
 	}
 
 	@media (max-width: 991px) and (min-width: 768px) {
-		max-width: 190px;
+		max-width: 19rem;
 	}
 
 	@media (max-width: 767px) {
-		max-width: 150px;
+		max-width: 15rem;
 	}
 
-	@media (min-width: 768px) {
-	}
-
-	@media (max-width: 991px) {
+	@media (max-width: 991px) and (max-height: 500px) {
 		position: relative;
 
 		&::before {
@@ -76,29 +73,37 @@
 			left: calc(var(--header-padding) * -1);
 			top: calc(var(--header-padding) * -1);
 
-			width: calc(50vw + var(--header-padding));
-			height: calc(100% + var(--header-padding));
+			height: calc(100% + ((var(--header-padding) * 1.4)));
 
 			background-color: transparent;
 			z-index: -1;
 			content: "";
 
 			opacity: 0;
+			visibility: hidden;
+			transform: translate(-100%, 0);
 
-			will-change: opacity, background-color;
-			transition: opacity 0.2s, background-color 0.2s;
+			will-change: opacity, background-color, transform, visibility;
+			transition: opacity 0.2s ease-in, background-color 0.2s ease-in, transform 0.2s ease-in, visibility 0.2s ease-in;
+
+			@media (min-width: 768px) {
+				width: calc(50vw + var(--header-padding) - 4px);
+			}
+
+			@media (max-width: 767px) {
+				width: calc(70vw + var(--header-padding) - 4px);
+			}
 		}
 	}
 
 	.header__wrapper:has(.active) & {
-		@media (max-width: 991px) {
+		@media (max-width: 991px) and (max-height: 500px) {
 			&::before {
-				opacity: 1;
-
 				background-color: $purple-3;
 
-				will-change: opacity, background-color;
-				transition: opacity 0.2s, background-color 0.2s;
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
 			}
 		}
 	}
@@ -123,23 +128,23 @@
 
 		overflow-y: auto;
 		overscroll-behavior: contain;
-
 		z-index: 3;
-		transform: translate(-100%, 0);
+
 		opacity: 0;
 		visibility: hidden;
+		transform: translate(-100%, 0);
 
 		will-change: opacity, visibility, transform;
 		transition: opacity 0.2s ease-in, visibility 0.2s ease-in, transform 0.2s ease-in;
 
 		@media (min-width: 768px) {
 			max-width: calc(50vw + var(--header-padding));
-			padding: 180px 40px 40px;
+			padding: 18rem 4rem 4rem;
 		}
 
 		@media (max-width: 767px) {
 			max-width: calc(70vw + var(--header-padding));
-			padding: 120px 20px 20px;
+			padding: 12rem 2rem 2rem;
 		}
 
 		&.active {
@@ -154,11 +159,11 @@
 	display: flex;
 
 	@media (min-width: 1201px) {
-		gap: 40px;
+		gap: 4rem;
 	}
 
 	@media (max-width: 1200px) {
-		gap: 20px;
+		gap: 2rem;
 	}
 
 	@media (min-width: 992px) {

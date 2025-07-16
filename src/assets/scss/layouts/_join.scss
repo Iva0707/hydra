@@ -29,6 +29,8 @@
 }
 
 .join__form {
+	position: relative;
+
 	display: grid;
 	grid-auto-flow: row;
 
@@ -61,5 +63,24 @@
 
 	&:not(:first-child) {
 		margin-top: 1rem;
+	}
+}
+
+.join__message {
+	position: absolute;
+	bottom: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	color: $green;
+	font-size: 1.2rem;
+	white-space: nowrap;
+
+	opacity: 0;
+	visibility: hidden;
+
+	.join__form--success & {
+		opacity: 1;
+		visibility: visible;
 	}
 }

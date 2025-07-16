@@ -229,6 +229,60 @@ const initContactSwiper = ({ windowWidth }) => {
 	}
 };
 
+// join form
+const validateForm = ({ form }) => {
+	if (!form) return;
+
+	form.addEventListener("submit", (event) => {
+		event.preventDefault();
+		let isValid = true;
+
+		const inputs = form.querySelectorAll("input, textarea");
+
+		inputs.forEach((input) => {
+			const wrapper = input.closest(".form");
+			wrapper.classList.remove("form--error");
+
+			const value = input.value.trim();
+			const type = input.type;
+
+			if (type === "text" && /^\d+$/.test(value)) {
+				wrapper.classList.add("form--error");
+				isValid = false;
+			}
+
+			if (type === "tel" && (!/^[\d\s()+-]+$/.test(value) || !/\d/.test(value))) {
+				wrapper.classList.add("form--error");
+				isValid = false;
+			}
+
+			if (!value) {
+				wrapper.classList.add("form--error");
+				isValid = false;
+			}
+		});
+
+		if (isValid) {
+			form.reset();
+			form.classList.add("join__form--success");
+
+			setTimeout(() => {
+				form.classList.remove("join__form--success");
+			}, 3000);
+		}
+	});
+};
+
+const initFormValidation = () => {
+	const SELECTORS = {
+		form: ".js-join-form",
+	};
+
+	const form = document.querySelector(SELECTORS.form);
+
+	validateForm({ form });
+};
+
 const main = () => {
 	handleAnchorLinks();
 	resize(initContactSwiper, { debounceTime: 50 });
@@ -236,6 +290,7 @@ const main = () => {
 	resize(initTechnologiesSwiper, { debounceTime: 50 });
 	resize(initWhySwiper, { debounceTime: 50 });
 	initBurger();
+	initFormValidation();
 };
 
 window.onload = () => {

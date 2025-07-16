@@ -13,12 +13,19 @@ textarea {
 	border: 2px solid $white;
 	border-radius: 4rem;
 
+	will-change: border-color;
+	transition: border-color 0.2s;
+
 	@media (min-width: 768px) {
 		padding: 2.2rem 4.2rem;
 	}
 
 	@media (max-width: 767px) {
 		padding: 1.6rem 3rem;
+	}
+
+	&.form--error {
+		border-color: $red;
 	}
 }
 
@@ -112,17 +119,30 @@ textarea {
 }
 
 .form__error {
-	display: none;
+	position: absolute;
+	bottom: -1.8rem;
 
 	margin-top: 0.6rem;
 
 	font-size: 1.2rem;
-	color: #ff4d4f;
+	color: $red;
 
-	position: absolute;
-	left: 4.2rem;
-	bottom: -1.8rem;
+	opacity: 0;
+	visibility: hidden;
 
-	will-change: opacity;
-	transition: opacity 0.2s ease;
+	will-change: opacity, visibility;
+	transition: opacity 0.2s, visibility 0.2s;
+
+	@media (min-width: 768px) {
+		left: 4.2rem;
+	}
+
+	@media (max-width: 767px) {
+		left: 3rem;
+	}
+
+	.form--error & {
+		opacity: 1;
+		visibility: visible;
+	}
 }
