@@ -45,7 +45,7 @@
 	&.swiper-navigation--bottom {
 		@media (max-width: 767px) {
 			top: unset;
-			bottom: 50px;
+			bottom: 5rem;
 
 			transform: translateX(-50%);
 		}

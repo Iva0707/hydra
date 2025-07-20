@@ -46,7 +46,6 @@ const handleAnchorLinks = () => {
 };
 
 // burger
-
 const burger = ({ header, burger, menu }) => {
 	if (!header || !burger || !menu) return;
 
@@ -112,33 +111,28 @@ const initBurger = () => {
 	});
 };
 
-// how swiper
-let swiperHowInstance = null;
+// contact swiper
+let swiperConractInstance = null;
 
-const initHowSwiper = ({ windowWidth }) => {
+const initContactSwiper = ({ windowWidth }) => {
 	const isMobile = windowWidth < 992;
-	const swiperSelector = ".js-steps-swiper";
+	const swiperSelector = ".js-contact-swiper";
 
-	if (isMobile && !swiperHowInstance) {
-		swiperHowInstance = new Swiper(swiperSelector, {
+	if (isMobile && !swiperConractInstance) {
+		swiperConractInstance = new Swiper(swiperSelector, {
 			slidesPerView: 1,
 			spaceBetween: 40,
+			loop: true,
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
 			},
-			breakpoints: {
-				768: {
-					spaceBetween: 40,
-					slidesPerView: 2,
-				},
-			},
 		});
 	}
 
-	if (!isMobile && swiperHowInstance) {
-		swiperHowInstance.destroy(true, true);
-		swiperHowInstance = null;
+	if (!isMobile && swiperConractInstance) {
+		swiperConractInstance.destroy(true, true);
+		swiperConractInstance = null;
 	}
 };
 
@@ -204,28 +198,33 @@ const initTechnologiesSwiper = ({ windowWidth }) => {
 	}
 };
 
-// contact swiper
-let swiperConractInstance = null;
+// how swiper
+let swiperHowInstance = null;
 
-const initContactSwiper = ({ windowWidth }) => {
+const initHowSwiper = ({ windowWidth }) => {
 	const isMobile = windowWidth < 992;
-	const swiperSelector = ".js-contact-swiper";
+	const swiperSelector = ".js-steps-swiper";
 
-	if (isMobile && !swiperConractInstance) {
-		swiperConractInstance = new Swiper(swiperSelector, {
+	if (isMobile && !swiperHowInstance) {
+		swiperHowInstance = new Swiper(swiperSelector, {
 			slidesPerView: 1,
 			spaceBetween: 40,
-			loop: true,
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
 			},
+			breakpoints: {
+				768: {
+					spaceBetween: 40,
+					slidesPerView: 2,
+				},
+			},
 		});
 	}
 
-	if (!isMobile && swiperConractInstance) {
-		swiperConractInstance.destroy(true, true);
-		swiperConractInstance = null;
+	if (!isMobile && swiperHowInstance) {
+		swiperHowInstance.destroy(true, true);
+		swiperHowInstance = null;
 	}
 };
 
@@ -283,14 +282,22 @@ const initFormValidation = () => {
 	validateForm({ form });
 };
 
+// main
 const main = () => {
 	handleAnchorLinks();
-	resize(initContactSwiper, { debounceTime: 50 });
-	resize(initHowSwiper, { debounceTime: 50 });
-	resize(initTechnologiesSwiper, { debounceTime: 50 });
-	resize(initWhySwiper, { debounceTime: 50 });
 	initBurger();
+	resize(initContactSwiper, { debounceTime: 50 });
+	resize(initWhySwiper, { debounceTime: 50 });
+	resize(initTechnologiesSwiper, { debounceTime: 50 });
+	resize(initHowSwiper, { debounceTime: 50 });
 	initFormValidation();
+
+	AOS.init({
+		offset: 220,
+		easing: "ease-in-out",
+		once: true,
+		duration: 400,
+	});
 };
 
 window.onload = () => {

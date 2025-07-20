@@ -309,6 +309,21 @@ a:not(.button):not(.link--no-hover):hover::before, a:not(.button):not(.link--no-
     width: 100%;
 }
 
+::-moz-selection {
+    background: #c0b7e8;
+    color: #211e2e;
+}
+
+::selection {
+    background: #c0b7e8;
+    color: #211e2e;
+}
+
+::-moz-selection {
+    background: #c0b7e8;
+    color: #211e2e;
+}
+
 button {
     font-family: inherit;
 }
@@ -403,8 +418,8 @@ button {
     top: 50%;
     height: 3px;
     background: linear-gradient(90deg, #c0b7e8 0%, #8176af 100%);
-    border-radius: 40px;
-    will-change: transform, top;
+    border-radius: 4rem;
+    will-change: transform, width, top;
     transition: transform 0.2s, width 0.1s, top 0.2s;
 }
 
@@ -614,7 +629,7 @@ button {
 @media (max-width: 767px) {
     .swiper-navigation.swiper-navigation--bottom {
         top: unset;
-        bottom: 50px;
+        bottom: 5rem;
         transform: translateX(-50%);
     }
 }
@@ -1163,32 +1178,32 @@ textarea {
         display: flex;
         justify-content: space-between;
         background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211e2e 100%);
-        border-radius: 90px;
+        border-radius: 9rem;
         box-shadow: 0 4px 4px 0 rgba(192, 183, 232, 0.01);
     }
 }
 
 @media (min-width: 1201px) {
     .contact-slider__wrapper {
-        padding: 24px;
+        padding: 2.4rem;
     }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
     .contact-slider__wrapper {
-        padding: 24px 15px;
+        padding: 2.4rem 1.5rem;
     }
 }
 
 @media (min-width: 1201px) {
     .contact-slider__slide {
-        padding: 30px 20px;
+        padding: 3rem 2rem;
     }
 }
 
 @media (max-width: 1200px) and (min-width: 992px) {
     .contact-slider__slide {
-        padding: 20px 10px;
+        padding: 2rem 1rem;
     }
 }
 
@@ -1200,9 +1215,9 @@ textarea {
 
 @media (max-width: 991px) {
     .contact-slider__slide {
-        padding: 32px 40px;
+        padding: 3.2rem 4rem;
         background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211e2e 100%);
-        border-radius: 90px;
+        border-radius: 9rem;
         box-shadow: 0 4px 4px 0 rgba(192, 183, 232, 0.01);
     }
 }
@@ -1221,20 +1236,20 @@ textarea {
 @media (min-width: 1201px) {
     .contact-slider__row {
         align-items: flex-start;
-        gap: 20px;
+        gap: 2rem;
     }
 }
 
 @media (max-width: 1200px) {
     .contact-slider__row {
         align-items: center;
-        gap: 15px;
+        gap: 1.5rem;
     }
 }
 
 .contact-slider__image_wrapper {
+    max-width: 5rem;
     aspect-ratio: 1;
-    max-width: 50px;
 }
 
 .contact-slider__image {

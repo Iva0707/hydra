@@ -1,66 +1,358 @@
 ---
 layout: default
-title: List of pages
+title: Home
 ---
 
-<section>
+<section class="hero" id="hero">
 	<div class="container">
-		<div class="wrapper">
-			<ul style="display: flex; flex-direction: column; row-gap: 10px">
-				<li><a href="./home.html">Home</a></li>
-			</ul>
+		<div class="hero__wrapper">
+			<img class="hero__deco hero__deco--1" src="assets/images/dev/hero/deco_01.svg" alt="" />
+			<img class="hero__deco hero__deco--2" src="assets/images/dev/hero/deco_02.svg" alt="" />
+			<div class="hero__row">
+				<h1 class="hero__title">
+					<span>Dive</span>
+					Into The Depths Of
+					<span>Virtual Reality</span>
+				</h1>
+				<div class="hero__text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .</p>
+				</div>
+				<a class="button button--arrow hero__button" href="#join">BUILD YOUR WORLD</a>
+			</div>
+			<div class="hero__image_wrapper" data-aos="fade-left">
+				<img class="hero__image" src="assets/images/dev/hero/image_01.jpg" alt="" />
+			</div>
 		</div>
 	</div>
 </section>
 
-<section class="template">
+<section class="contact" id="contact">
 	<div class="container">
-		<div class="template__wrapper">
-			<div class="heading">
-				<h2>
-					<span class="heading__title"><strong>ABOUT</strong></span>
-					<span class="heading__sub">HYDRA VR</span>
-				</h2>
-			</div>
-
-			<div class="heading heading--arrow">
-				<h2>
-					<span class="heading__title"><strong>INTRODUCTION</strong></span>
-					<span class="heading__arrow_wrapper">
-						<span class="heading__sub">TO HYDRA VR</span>
-						<div class="heading__arrow">
-							<img class="heading__arrow_image" src="assets/images/dev/svg/arrow.svg" alt="" />
+		<div class="contact__wrapper">
+			<div class="contact__swiper">
+				<div class="swiper contact-slider js-contact-swiper">
+					<div class="swiper-wrapper contact-slider__wrapper">
+						<div class="swiper-slide contact-slider__slide">
+							<div class="contact-slider__row">
+								<div class="contact-slider__image_wrapper">
+									<img class="contact-slider__image" src="assets/images/dev/svg/phone.svg" alt="Phone icon" />
+								</div>
+								<div class="contact-slider__content">
+									<h2 class="contact-slider__title">Give Us a Call</h2>
+									<a class="contact-slider__link" href="tel:+111011111010" target="_blank">(110) 1111-1010</a>
+								</div>
+							</div>
 						</div>
-					</span>
-				</h2>
+						<div class="swiper-slide contact-slider__slide">
+							<div class="contact-slider__row">
+								<div class="contact-slider__image_wrapper">
+									<img class="contact-slider__image" src="assets/images/dev/svg/location.svg" alt="Location icon" />
+								</div>
+								<div class="contact-slider__content">
+									<h2 class="contact-slider__title">Pay Us a Visit</h2>
+									<a class="contact-slider__link" href="https://maps.app.goo.gl/uPYrwLcoiv1A4nj88" target="_blank">Union St, Seattle, WA 98101, United States</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide contact-slider__slide">
+							<div class="contact-slider__row">
+								<div class="contact-slider__image_wrapper">
+									<img class="contact-slider__image" src="assets/images/dev/svg/mail.svg" alt="Mail icon" />
+								</div>
+								<div class="contact-slider__content">
+									<h2 class="contact-slider__title">Send Us a Message</h2>
+									<a class="contact-slider__link" href="mailto:contact@hydravtech.com" target="_blank">Contact@HydraVTech.com</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-navigation swiper-navigation--white">
+						<div class="swiper-button-prev" aria-label="Previous slide"></div>
+						<div class="swiper-button-next" aria-label="Next slide"></div>
+					</div>
+				</div>
 			</div>
+		</div>
+	</div>
+</section>
 
-			<div class="heading heading--center">
-				<h2>
-					<span class="heading__title"><strong>TECHNOLOGIES & HARDWARE</strong></span>
-					<span class="heading__sub">USED BY HYDRA VR.</span>
-				</h2>
+<section class="introduction" id="introduction">
+	<img class="introduction__deco introduction__deco--1" src="assets/images/dev/introduction/deco_01.svg" />
+	<img class="introduction__deco introduction__deco--2" src="assets/images/dev/introduction/deco_02.svg" />
+	<div class="container">
+		<div class="introduction__wrapper">
+			<div class="introduction__row introduction__row--top">
+				<div class="heading heading--arrow introduction__heading">
+					<h2>
+						<span class="heading__title"><strong>INTRODUCTION</strong></span>
+						<span class="heading__arrow_wrapper">
+							<span class="heading__sub">TO HYDRA VR</span>
+							<div class="heading__arrow">
+								<img class="heading__arrow_image" src="assets/images/dev/svg/arrow.svg" alt="" />
+							</div>
+						</span>
+					</h2>
+				</div>
+				<div class="introduction__text">
+					<p>
+						Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+						Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
+					</p>
+				</div>
 			</div>
+			<div class="introduction__row introduction__row--bottom" id="about">
+				<div class="introduction__image_wrapper" data-aos="fade-right">
+					<img class="introduction__image" src="assets/images/dev/introduction/image_01.jpg" alt="" aria-hidden="" />
+				</div>
+				<div class="introduction__column">
+					<div class="heading introduction__heading">
+						<h2>
+							<span class="heading__title"><strong>ABOUT</strong></span>
+							<span class="heading__sub">HYDRA VR</span>
+						</h2>
+					</div>
+					<div class="introduction__text">
+						<p>
+							Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at
+							in. Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet
+							cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi n tempor.
+						</p>
+					</div>
+					<a class="button" href="#contact">LET’S GET IN TOUCH</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-			<div class="heading heading--center heading--deco">
+<section class="build-why" id="why">
+	<img class="build-why__deco" src="assets/images/dev/build-why/deco_01.svg" alt="deco" />
+	<div class="container">
+		<div class="build-why__wrapper">
+			<div class="build-why__content">
+				<div class="heading heading--arrow build-why___heading">
+					<h2>
+						<span class="heading__title"><strong>WHY BUILD</strong></span>
+						<span class="heading__arrow_wrapper">
+							<span class="heading__sub">WITH HYDRA?</span>
+							<div class="heading__arrow">
+								<img class="heading__arrow_image" src="assets/images/dev/svg/arrow.svg" alt="" />
+							</div>
+						</span>
+					</h2>
+				</div>
+				<div class="build-why__text">
+					<p>
+						Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+						Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
+					</p>
+				</div>
+			</div>
+			<div class="build-why__swiper">
+				<div class="swiper why-slider js-why-swiper">
+					<div class="swiper-wrapper why-slider__wrapper">
+						<div class="swiper-slide why-slider__slide">
+							<div class="why-slider__image_wrapper">
+								<img class="why-slider__image" src="assets/images/dev/build-why/image_01.jpg" alt="" />
+							</div>
+							<h3 class="why-slider__title">SIMULATION</h3>
+							<span class="why-slider__deco"></span>
+							<div class="why-slider__text">Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</div>
+							<a class="button why-slider__button" href="#join">TRY IT NOW</a>
+						</div>
+						<div class="swiper-slide why-slider__slide">
+							<div class="why-slider__image_wrapper">
+								<img class="why-slider__image" src="assets/images/dev/build-why/image_02.jpg" alt="" />
+							</div>
+							<h3 class="why-slider__title">EDUCATION</h3>
+							<span class="why-slider__deco"></span>
+							<div class="why-slider__text">Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</div>
+							<a class="button why-slider__button" href="#join">TRY IT NOW</a>
+						</div>
+						<div class="swiper-slide why-slider__slide">
+							<div class="why-slider__image_wrapper">
+								<img class="why-slider__image" src="assets/images/dev/build-why/image_03.jpg" alt="" />
+							</div>
+							<h3 class="why-slider__title">SELF-CARE</h3>
+							<span class="why-slider__deco"></span>
+							<div class="why-slider__text">Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</div>
+							<a class="button why-slider__button" href="#join">TRY IT NOW</a>
+						</div>
+						<div class="swiper-slide why-slider__slide">
+							<div class="why-slider__image_wrapper">
+								<img class="why-slider__image" src="assets/images/dev/build-why/image_04.jpg" alt="" />
+							</div>
+							<h3 class="why-slider__title">OUTDOOR</h3>
+							<span class="why-slider__deco"></span>
+							<div class="why-slider__text">Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet porttitor rhoncus libero justo laoreet sit amet vitae.</div>
+							<a class="button why-slider__button" href="#join">TRY IT NOW</a>
+						</div>
+					</div>
+					<div class="swiper-navigation">
+						<div class="swiper-button-prev" aria-label="Previous slide"></div>
+						<div class="swiper-button-next" aria-label="Next slide"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="technologies" id="technologies">
+	<div class="container">
+		<div class="technologies__wrapper">
+			<div class="technologies__row">
+				<div class="heading heading--center technologies__heading">
+					<h2>
+						<span class="heading__title"><strong>TECHNOLOGIES & HARDWARE</strong></span>
+						<span class="heading__sub">USED BY HYDRA VR.</span>
+					</h2>
+				</div>
+				<span class="technologies__arrow"></span>
+			</div>
+			<div class="technologies__swiper">
+				<div class="swiper technologies-slider js-technologies-swiper">
+					<div class="swiper-wrapper technologies-slider__wrapper">
+						<div class="swiper-slide technologies-slider__slide">
+							<div class="technologies-slider__image_wrapper">
+								<img class="technologies-slider__image" src="assets/images/dev/technologies/image_02.png" alt="Technology" />
+							</div>
+						</div>
+						<div class="swiper-slide technologies-slider__slide">
+							<div class="technologies-slider__image_wrapper">
+								<img class="technologies-slider__image" src="assets/images/dev/technologies/image_03.png" alt="Technology" />
+							</div>
+						</div>
+						<div class="swiper-slide technologies-slider__slide">
+							<div class="technologies-slider__image_wrapper">
+								<img class="technologies-slider__image" src="assets/images/dev/technologies/image_04.png" alt="Technology" />
+							</div>
+						</div>
+						<div class="swiper-slide technologies-slider__slide">
+							<div class="technologies-slider__image_wrapper">
+								<img class="technologies-slider__image" src="assets/images/dev/technologies/image_05.png" alt="Technology" />
+							</div>
+						</div>
+					</div>
+					<div class="swiper-navigation">
+						<div class="swiper-button-prev" aria-label="Previous slide"></div>
+						<div class="swiper-button-next" aria-label="Next slide"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="build-how" id="how">
+	<img class="build-how__deco" src="assets/images/dev/build-how/deco_01.svg" alt="deco" />
+	<div class="container">
+		<div class="build-how__wrapper">
+			<div class="build-how__content">
+				<div class="heading heading--arrow build-how___heading">
+					<h2>
+						<span class="heading__title"><strong>HOW WE build</strong></span>
+						<span class="heading__arrow_wrapper">
+							<span class="heading__sub">WITH HYDRA VR?</span>
+							<div class="heading__arrow">
+								<img class="heading__arrow_image" src="assets/images/dev/svg/arrow.svg" alt="" />
+							</div>
+						</span>
+					</h2>
+				</div>
+				<div class="build-how__text">
+					<p>
+						Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus.
+						Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.
+					</p>
+				</div>
+			</div>
+			<div class="build-how__swiper">
+				<div class="swiper steps-slider js-steps-swiper">
+					<div class="swiper-wrapper steps-slider__wrapper">
+						<div class="swiper-slide steps-slider__slide">
+							<div class="steps-slider__circle">01</div>
+							<div class="steps-slider__row">
+								<img class="steps-slider__arrow" src="assets/images/dev/svg/arrow-3.svg" alt="Arrow" />
+								<h3 class="steps-slider__title">3D Conception & Design</h3>
+							</div>
+						</div>
+						<div class="swiper-slide steps-slider__slide">
+							<div class="steps-slider__circle">02</div>
+							<div class="steps-slider__row">
+								<img class="steps-slider__arrow" src="assets/images/dev/svg/arrow-3.svg" alt="Arrow" />
+								<h3 class="steps-slider__title">Interaction Design</h3>
+							</div>
+						</div>
+						<div class="swiper-slide steps-slider__slide">
+							<div class="steps-slider__circle">03</div>
+							<div class="steps-slider__row">
+								<img class="steps-slider__arrow" src="assets/images/dev/svg/arrow-3.svg" alt="Arrow" />
+								<h3 class="steps-slider__title">VR World User Testing</h3>
+							</div>
+						</div>
+						<div class="swiper-slide steps-slider__slide">
+							<div class="steps-slider__circle">04</div>
+							<div class="steps-slider__row">
+								<img class="steps-slider__arrow" src="assets/images/dev/svg/arrow-3.svg" alt="Arrow" />
+								<h3 class="steps-slider__title">Hydra VR Deploy</h3>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-navigation swiper-navigation--bottom">
+						<div class="swiper-button-prev" aria-label="Previous slide"></div>
+						<div class="swiper-button-next" aria-label="Next slide"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="join" id="join">
+	<div class="container">
+		<div class="join__wrapper">
+			<div class="heading heading--center heading--deco join__heading">
 				<h2>
 					<span class="heading__title"><strong>JOIN HYDRA</strong></span>
 					<span class="heading__deco"></span>
 					<span class="heading__sub">Let’s build-how Your VR Experience</span>
 				</h2>
 			</div>
-
-			<a class="button" href="#">JOIN HYDRA</a>
-
-			<a class="button button--outline" href="#">JOIN HYDRA</a>
-
-			<a class="button button--arrow" href="#">JOIN HYDRA</a>
-
-			<!-- <div class="form">
-				<input class="form__input" placeholder="Name" id="name" type="text" autocomplete="name" required />
-				<label class="form__label" for="name">Name</label>
-				<span class="form__error">Please enter a valid name.</span>
-			</div> -->
+			<form action="#" class="join__form js-join-form">
+				<div class="form join__item">
+					<input class="form__input" placeholder="First Name" id="firstName" type="text" autocomplete="first name" required />
+					<label class="form__label" for="firstName">First Name</label>
+					<span class="form__error">Please enter valid name.</span>
+				</div>
+				<div class="form join__item">
+					<input class="form__input" placeholder="Last Name" id="lastName" type="text" autocomplete="last name" required />
+					<label class="form__label" for="lastName">Last Name</label>
+					<span class="form__error">Please enter valid name.</span>
+				</div>
+				<div class="form join__item">
+					<input class="form__input" placeholder="Email" id="name" type="email" autocomplete="email" required />
+					<label class="form__label" for="name">Email</label>
+					<span class="form__error">Please enter valid email.</span>
+				</div>
+				<div class="form join__item">
+					<input class="form__input" placeholder="Phone Number" id="phone" type="tel" autocomplete="phone number" required />
+					<label class="form__label" for="phone">Phone Number</label>
+					<span class="form__error">Please enter valid phone number.</span>
+				</div>
+				<div class="form join__item join__item--full">
+					<input class="form__input" placeholder="Subject" id="subject" type="text" required />
+					<label class="form__label" for="subject">Subject</label>
+					<span class="form__error">Please enter valid data.</span>
+				</div>
+				<div class="form join__item join__item--full join__item--textarea">
+					<textarea class="form__input" placeholder="Tell Us Something..." id="info" type="text" required></textarea>
+					<label class="form__label" for="info">Tell Us Something...</label>
+					<span class="form__error">Please enter valid data.</span>
+				</div>
+				<button class="button join__button" type="submit">SEND TO HYDRA</button>
+				<span class="join__message">Application successfully sent.</span>
+			</form>
 		</div>
 	</div>
 </section>

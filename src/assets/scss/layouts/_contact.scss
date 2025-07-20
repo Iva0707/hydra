@@ -5,26 +5,26 @@
 
 		background: $gradient-7;
 
-		border-radius: 90px;
+		border-radius: 9rem;
 		box-shadow: 0 4px 4px 0 rgba($purple-2, 0.01);
 	}
 
 	@media (min-width: 1201px) {
-		padding: 24px;
+		padding: 2.4rem;
 	}
 
 	@media (max-width: 1200px) and (min-width: 992px) {
-		padding: 24px 15px;
+		padding: 2.4rem 1.5rem;
 	}
 }
 
 .contact-slider__slide {
 	@media (min-width: 1201px) {
-		padding: 30px 20px;
+		padding: 3rem 2rem;
 	}
 
 	@media (max-width: 1200px) and (min-width: 992px) {
-		padding: 20px 10px;
+		padding: 2rem 1rem;
 	}
 
 	@media (min-width: 992px) {
@@ -32,11 +32,11 @@
 	}
 
 	@media (max-width: 991px) {
-		padding: 32px 40px;
+		padding: 3.2rem 4rem;
 
 		background: $gradient-7;
 
-		border-radius: 90px;
+		border-radius: 9rem;
 		box-shadow: 0 4px 4px 0 rgba($purple-2, 0.01);
 	}
 
@@ -53,18 +53,18 @@
 
 	@media (min-width: 1201px) {
 		align-items: flex-start;
-		gap: 20px;
+		gap: 2rem;
 	}
 
 	@media (max-width: 1200px) {
 		align-items: center;
-		gap: 15px;
+		gap: 1.5rem;
 	}
 }
 
 .contact-slider__image_wrapper {
+	max-width: 5rem;
 	aspect-ratio: 1;
-	max-width: 50px;
 }
 
 .contact-slider__image {
