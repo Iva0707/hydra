@@ -82,6 +82,9 @@
 }
 
 .hero__image_wrapper {
+	max-width: 50rem;
+	aspect-ratio: 1.15 / 1;
+	
 	border-radius: 10rem 10rem 10rem 24rem;
 	overflow: hidden;
 
